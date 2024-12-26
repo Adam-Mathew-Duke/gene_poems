@@ -38,21 +38,21 @@
       });
   </script>
   <script>
-    window.scrollTo(0, 0);
     window.onload = load_poem('poems/Vitamin%20d%20receptor.html'); 
     function load_poem(file_path) {
-  fetch(file_path)
-    .then(response => response.text())
-    .then(data => {
-      const contentDiv = document.getElementById('content');
-      contentDiv.innerHTML = data;
-    })
-    .catch(error => {
-      console.error('Error fetching HTML:', error);
-      const contentDiv = document.getElementById('content');
-      contentDiv.innerHTML = "Failed to load content.";
-    });
-}
+      window.scrollTo(0, 0);
+    fetch(file_path)
+      .then(response => response.text())
+      .then(data => {
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error fetching HTML:', error);
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = "Failed to load content.";
+      });
+  }
   </script>
   <body>
     <center>
