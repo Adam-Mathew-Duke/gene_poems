@@ -18,26 +18,32 @@ h1 {
   text-color: white;
 }
 </style>
- <script>
+  <script>
     const repoOwner = 'adam-mathew-duke'; // Replace with your GitHub username
-    const repoName = 'gene_poems'; // Replace with your repository name
+    const repoName = 'gene_poems'; // Replace with your repository name 
 
     const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}`;
 
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
-        const starCountDiv = document.getElementById('star-count');
-        starCountDiv.textContent = `This repository has ${data.stargazers_count} stars.`;
+        const repoInfoDiv = document.getElementById('repo-info');
+        repoInfoDiv.innerHTML = `
+          <p><strong>Stars:</strong> ${data.stargazers_count}</p>
+          <p><strong>Forks:</strong> ${data.forks_count}</p>
+          <p><strong>Watchers:</strong> ${data.watchers_count}</p>
+          <p><strong>Language:</strong> ${data.language || 'N/A'}</p> 
+          <p><strong>Description:</strong> ${data.description || 'No description provided.'}</p>
+        `;
       })
       .catch(error => {
         console.error('Error fetching repository data:', error);
-        const starCountDiv = document.getElementById('star-count');
-        starCountDiv.textContent = "Failed to fetch star count.";
+        const repoInfoDiv = document.getElementById('repo-info');
+        repoInfoDiv.textContent = "Failed to fetch repository data.";
       });
   </script>
-<body>
-    <div id="star-count">test</div>
+  <body>
+  <div id="repo-info"></div>
 <h1>Gene Poems</h1> 
  <a href="poems/vitamin D receptor poem.html">vitamin D receptor poem</a>
 </body>
