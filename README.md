@@ -6,4 +6,4 @@ I'm looking forward to your input feedback please use my form for any comments a
 
 Links:
 Gene Database: https://www.ncbi.nlm.nih.gov/gene/
-[Feedback Form]([URL](https://forms.gle/Db3FYqatRCiu9YEg8)
+[Feedback Form](https://forms.gle/Db3FYqatRCiu9YEg8)
