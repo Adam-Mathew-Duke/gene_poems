@@ -18,9 +18,11 @@ h1 {
   text-color: white;
 }
 </style>
-   <script>
+ <script>
+    const repoOwner = 'adam-mathew-duke'; // Replace with your GitHub username
+    const repoName = 'gene_poems'; // Replace with your repository name
 
-    const apiUrl = `https://github.com/Adam-Mathew-Duke/gene_poems/edit/main/`;
+    const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}`;
 
     fetch(apiUrl)
       .then(response => response.json())
