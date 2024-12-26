@@ -30,9 +30,9 @@ h1 {
         const repoInfoDiv = document.getElementById('repo-info');
         repoInfoDiv.innerHTML = `
           <div>
-          Repository: ${data.description} 
+          <p>Repository: ${data.description} 
           Star Gazers: ${data.stargazers_count} 
-          Watchers: ${data.watchers_count}
+          Watchers: ${data.watchers_count}</p>
           </div>
         `;
       })
