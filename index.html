@@ -55,6 +55,14 @@
   <div id="content"></div>
   <hr>
 
+  <script>
+    function showSelectedOption() {
+      var select = document.getElementById("mySelect");
+      var selectedValue = select.value;
+      alert("You selected: " + selectedValue);
+    }
+  </script>
+    
  <h2>Select an Option:</h2>
 
   <select id="mySelect">
@@ -65,13 +73,7 @@
 
   <button onclick="showSelectedOption()">Show Selected Option</button>
 
-  <script>
-    function showSelectedOption() {
-      var select = document.getElementById("mySelect");
-      var selectedValue = select.value;
-      alert("You selected: " + selectedValue);
-    }
-  </script>
+
 
   </body>
 </html>
