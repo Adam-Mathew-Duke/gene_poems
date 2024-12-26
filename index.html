@@ -17,9 +17,7 @@
     <script>
     const repoOwner = 'adam-mathew-duke'; // Replace with your GitHub username
     const repoName = 'gene_poems'; // Replace with your repository name 
-
     const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}`;
-   
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
@@ -38,7 +36,6 @@
         repoInfoDiv.textContent = "Failed to fetch repository data.";
       });
   </script>
-  
   <script>
     fetch('poems/vitamin D receptor poem.html') 
       .then(response => response.text())
@@ -52,7 +49,6 @@
         contentDiv.innerHTML = "Failed to load content.";
       });
   </script>
-
   <body>
   <div id="repo-info"></div>
   <hr> 
