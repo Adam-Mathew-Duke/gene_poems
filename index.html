@@ -29,7 +29,7 @@ h1 {
       .then(data => {
         const repoInfoDiv = document.getElementById('repo-info');
         repoInfoDiv.innerHTML = `
-          <pre>Repository Name: ${data.description}</pre>
+          <div>Repository Name: ${data.description}</div>
         
           <p><strong>Stars:</strong> ${data.stargazers_count}</p>
           <p><strong>Forks:</strong> ${data.forks_count}</p>
