@@ -40,7 +40,6 @@
     window.onload = load_poem('poems/Vitamin%20d%20receptor.html'); 
     function load_poem(file_path)
     {
-      if (file_path = 'poems/Vitamin%20d%20receptor.html')
       fetch(file_path) 
         .then(response => response.text())
         .then(data => {
@@ -52,7 +51,7 @@
           const contentDiv = document.getElementById('content');
           contentDiv.innerHTML = "Failed to load content.";
         });
-    }
+
   </script>
   <body>
   <div id="repo-info"></div>
@@ -62,6 +61,7 @@
 
   <p>Gene Peoms</p>
   <button onclick="load_poem('poems/Vitamin%20d%20receptor.html')">Vitamin d receptor poem</button>
+  <button onclick="load_poem('/poems/Peroxisome%20proliferator%20activated%20receptor%20gamma%20poem.html')">Peroxisome proliferator activated receptor gamma poem</button>
 
   </body>
 </html>
