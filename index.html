@@ -40,9 +40,6 @@
   <script>
     window.onload = load_poem('poems/Vitamin%20d%20receptor.html'); 
     function load_poem(file_path) {
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-      
     fetch(file_path)
       .then(response => response.text())
       .then(data => {
