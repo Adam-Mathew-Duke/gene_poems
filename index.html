@@ -54,9 +54,24 @@
   <hr> 
   <div id="content"></div>
   <hr>
-    <option value="option1">Vitamin d receptor poem</option>
-    <option value="option2">2</option>
-    <option value="option3">3</option>
+
+ <h2>Select an Option:</h2>
+
+  <select id="mySelect">
+    <option value="option1">Vitamin d receptor</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
   </select>
+
+  <button onclick="showSelectedOption()">Show Selected Option</button>
+
+  <script>
+    function showSelectedOption() {
+      var select = document.getElementById("mySelect");
+      var selectedValue = select.value;
+      alert("You selected: " + selectedValue);
+    }
+  </script>
+
   </body>
 </html>
