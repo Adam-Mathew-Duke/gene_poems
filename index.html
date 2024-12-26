@@ -29,12 +29,11 @@ h1 {
       .then(data => {
         const repoInfoDiv = document.getElementById('repo-info');
         repoInfoDiv.innerHTML = `
-          <div>Repository Name: ${data.description}</div>
-        
-          <p><strong>Stars:</strong> ${data.stargazers_count}</p>
-          <p><strong>Forks:</strong> ${data.forks_count}</p>
-          <p><strong>Watchers:</strong> ${data.watchers_count}</p>
-          <p><strong>Language:</strong> ${data.language || 'N/A'}</p> 
+          <div>
+          ${data.description}
+          ${data.stargazers_count}
+          ${data.watchers_count}
+          </div>
         `;
       })
       .catch(error => {
