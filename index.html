@@ -30,7 +30,7 @@ h1 {
     const repoName = 'gene_poems'; // Replace with your repository name 
 
     const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}`;
- 
+   
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
