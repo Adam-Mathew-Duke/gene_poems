@@ -33,10 +33,10 @@
         repoInfoDiv.innerHTML = `
           <div>
           <p> 
-           | <a href='https://github.com/Adam-Mathew-Duke/gene_poems/tree/main'>${data.description}</a> has ${data.stargazers_count} star gazer and ${data.watchers_count} watcher
-           | Buy me a coffee 
-           | Share your comments
+          <a href='https://github.com/Adam-Mathew-Duke/gene_poems/tree/main'>${data.description}</a> has ${data.stargazers_count} star gazer and ${data.watchers_count} watcher
           </p>
+          <p><a href='https://buymeacoffee.com/adammathewv'>Buy me a coffee</a></p>
+          <p><a href='https://forms.gle/WKDELAzfCAzjJ5xe8'>Write a comment</a></p>
           </div> 
         `;
       })
@@ -68,8 +68,7 @@
   <select id="mySelect" onchange="load_poem(this.value)"> 
     <option value="poems/Vitamin%20d%20receptor.html">Vitamin d receptor</option>
     <option value="poems/Peroxisome%20proliferator%20activated%20receptor%20gamma%20poem.html">Peroxisome proliferator activated receptor gamma</option>
-  </select>
-  <div id='dna-ruler'>🧬🧬🧬</div>    
+  </select>    
   <div id="content"></div>
   <div id='dna-ruler'>🧬🧬🧬</div>
   <div id="repo-info"></div>    
