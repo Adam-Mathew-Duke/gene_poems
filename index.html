@@ -7,9 +7,14 @@
   a{ 
     color:white;
   }
-  #dna-ruler{
-  padding: 5px;
+  #header{
   text-align: left;
+  padding: 5px;
+  background-color: black;
+  }
+  #dna-ruler{
+  text-align: center;
+  padding: 5px;
   background-color: black;
   }  
   body {
@@ -31,9 +36,7 @@
         const repoInfoDiv = document.getElementById('repo-info');
         repoInfoDiv.innerHTML = `
           <div>
-           
           <a href='https://github.com/Adam-Mathew-Duke/gene_poems/tree/main' target="_blank">${data.description}</a> has ${data.stargazers_count} star gazer and ${data.watchers_count} watcher
-          
           </div> 
         `;
       })
@@ -60,15 +63,17 @@
   }
   </script>
   <body>
-  <p>Select a gene poem:</p>
-  <p>
-      <select id="mySelect" onchange="load_poem(this.value)"> 
-    <option value="poems/Vitamin%20d%20receptor.html">Vitamin d receptor</option>
-    <option value="poems/Peroxisome%20proliferator%20activated%20receptor%20gamma%20poem.html">Peroxisome proliferator activated receptor gamma</option>
-    <option value="poems/Microtubule associated protein tau.html">Microtubule Associated Protein Tau</option>       
-    <option value="poems/Bcl2 associated x apoptosis regulator.html">Bcl2 associated X, Apoptosis Regulator</option>
-      </select>
-  </p>
+
+  <div id='header'> 
+    <p>Select a gene poem:</p>
+    <p>
+        <select id="mySelect" onchange="load_poem(this.value)"> 
+      <option value="poems/Vitamin%20d%20receptor.html">Vitamin d receptor</option>
+      <option value="poems/Peroxisome%20proliferator%20activated%20receptor%20gamma%20poem.html">Peroxisome proliferator activated receptor gamma</option>
+      <option value="poems/Microtubule associated protein tau.html">Microtubule Associated Protein Tau</option>       
+      <option value="poems/Bcl2 associated x apoptosis regulator.html">Bcl2 associated X, Apoptosis Regulator</option>
+        </select>
+    </p>
   </div>
   <div id='dna-ruler'>🧬🧬🧬</div>
   <div id="content"></div>
